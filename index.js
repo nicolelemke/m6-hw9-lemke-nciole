@@ -15,37 +15,10 @@ form.addEventListener("submit", e => {
     var inputVal = input.value;
 
 
-//check if city
+//check for location
 
 var listItems = list.querySelectorAll(".ajax .city");
-var listItemsArray = Array.from(listItems);
 
-if (listItemsArray.length > 0) {
-    var filteredArray = listItemsArray.filter(el => {
-        let content = "";
-        if (inputVal.includes(",")) {
-
-            if (inputVal.split(",")[1].length > 2) {
-                inputVal = inputVal.split(",")[0];
-                content = el
-                    .querySelector(".city-name span")
-                    .textContent.toLowerCase();
-            } else {
-                content = el.querySelector(".city-name").dataset.name.toLowerCase();
-            }
-        } else {
-            content = el.querySelector(".city-name span").textContent.toLowerCase();
-        }
-        return content == inputVal.toLowerCase();
-    });
-
-    if (filteredArray.length > 0) {
-        msg.textContent = `Invalid Location.`;
-        form.reset();
-        input.focus();
-        return;
-    }
-}
 
 //perform ajax request
 
@@ -55,7 +28,7 @@ var url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&units=i
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        var { main, name, sys, weather } = data;
+        var { main, name, sys, weather} = data;
         var icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]
             }@2x.png`;
         var li = document.createElement("li");
@@ -71,7 +44,6 @@ fetch(url)
             </figure>
             <div class="city-temp"><span>Currently: ${Math.round(main.temp)}<sup>°</sup></span>F</div>
             <div class="feels-like"><span>Feels like: ${Math.round(main.feels_like)}<sup>°</sup>F</span></div>
-            
         `;
         li.innerHTML = markup;
         list.appendChild(li);
@@ -80,14 +52,12 @@ fetch(url)
         msg.textContent = "Location not found";
     });
 
+fetch()
+
 msg.textContent = "";
 form.reset();
 input.focus();
 });
 
-//<div class="lastupdated"><span>Last Updated: ${lastupdate.value}</span ></div>
-//api.openweathermap.org/data/2.5/weather?q=London&mode=xml
-
-//api.openweathermap.org/data/2.5/find?q=London&units=imperial
 
 //use mode paramter for xml ot get last updated time?
