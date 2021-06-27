@@ -14,40 +14,26 @@
         <h1>Current Weather</h1>
     </header>
 
-    <section>
-        <div class="container">
-            <img src="" alt="" srcset="" id="weather-icon">
-            <div id="location">
-            </div>
-
-            <div class="weather">
-
-                <div class="current">
-                </div>
-
-                <div class="feelslike">
-                </div>
-
-                <div class="lastupdated">
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <form id="widget">
-            <input type="text" placeholder="Enter location" name="search">
-            <button type="submit">Search</button>
-        </form>
-    </section>
-
-    <section>
-
-    </section>
-
     <main>
+        
+    <section class="top-banner">
+
+        <div class="container">
+            <h1 class="heading">Simple Weather App</h1>
+            <form>
+                <input type="text" placeholder="Enter location" name="search">
+                <button type="submit">Search</button>
+                <span class="msg"></span>
+            </form>
+        </div>
+
+     </section>
+
+        <section class="ajax-section">
+            <div class="container">
+                <ul class="cities"></ul>
+             </div>
+        </section>
         
     </main>
 
