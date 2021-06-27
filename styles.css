@@ -6,4 +6,72 @@
 
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
     display:block;
+    color: white;
+}
+
+
+
+html {
+        background-image: linear-gradient(#1b00ff, #00b8ff);
+        background-repeat: no-repeat;
+        height: 100%;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    padding: 50px 3% 20px 3%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+input, button {
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+button {
+    background-color: #ec9f2d;
+    transition: .2s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transition: .2s;
+}
+
+.cities div {
+    padding: 5px 0;
+    font-size: 1.5rem;
+}
+
+form {
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: .05rem;
+    padding-top: 20px;
+}
+
+figure {
+    padding-bottom: 20px;
+}
+
+figcaption {
+    text-transform: capitalize;
+}
+
+span.msg {
+    padding-bottom: 30px;
+    position: relative;
+    bottom: 30px;
+    font-size: 2rem;
 }

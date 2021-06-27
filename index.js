@@ -52,9 +52,6 @@ if (listItemsArray.length > 0) {
 var url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&units=imperial&appid=${apiKey}`
 
 
-
-
-
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -65,8 +62,8 @@ fetch(url)
         li.classList.add("city");
         var markup = `
             <h2 class="city-name" data-name="${name},${sys.country}">
-                <span>${name}</span>
-                <sup>${sys.country}</sup>
+                <span>${name},</span>
+                <span>${sys.country}</span>
             </h2>
             <figure>
                 <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
@@ -80,7 +77,7 @@ fetch(url)
         list.appendChild(li);
     })
     .catch(() => {
-        msg.textContent = "Location Not Found.";
+        msg.textContent = "Location not found";
     });
 
 msg.textContent = "";
