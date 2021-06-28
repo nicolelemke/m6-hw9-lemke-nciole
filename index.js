@@ -38,10 +38,12 @@ fetch(url)
                 <span>${name},</span>
                 <span>${sys.country}</span>
             </h2>
+            
             <figure>
                 <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
                 <figcaption>${weather[0]["description"]}</figcaption>
             </figure>
+            
             <div class="city-temp"><span>Currently: ${Math.round(main.temp)}<sup>°</sup></span>F</div>
             <div class="feels-like"><span>Feels like: ${Math.round(main.feels_like)}<sup>°</sup>F</span></div>
         `;
