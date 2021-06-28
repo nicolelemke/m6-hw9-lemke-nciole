@@ -3,7 +3,7 @@ var apiKey = "2fd1849b89e11b5338a0881ef5a3f34b";
 
 var form = document.querySelector(".userinput form")
 var input = document.querySelector(".userinput input")
-var list = document.querySelector(".ajax .cities")
+var list = document.querySelector(".ajax .city")
 var msg = document.querySelector(".userinput .msg")
 
 

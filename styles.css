@@ -46,7 +46,7 @@ button:hover {
     transition: .2s;
 }
 
-.cities div {
+.city div {
     padding: 5px 0;
     font-size: 1.5rem;
 }

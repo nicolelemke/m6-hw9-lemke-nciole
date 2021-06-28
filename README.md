@@ -18,3 +18,5 @@ https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 For API calls:
 https://openweathermap.org/current
 
+
+The tutorial helped me figure this one out. I am not comfortable with API calls thats for sure. 
